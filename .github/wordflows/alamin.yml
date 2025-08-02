@@ -1,0 +1,23 @@
+name: Print Alamin Txt file
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main  
+
+jobs:
+  read_txt_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git clone korte hobe
+        uses: actions/checkout@v2
+      - name: Read the Txt file
+        run: |
+          ls -l
+          cat alamin.txt
+      
+
+
